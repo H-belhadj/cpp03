@@ -3,7 +3,7 @@ SRC = ClapTrap.cpp main.cpp
 DFS = ClapTrap.hpp 
 
 OSRC=$(SRC:.cpp=.o)
-NAME= fixed
+NAME= ClapTrap
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
