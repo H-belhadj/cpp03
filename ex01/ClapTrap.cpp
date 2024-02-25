@@ -6,13 +6,14 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 23:44:35 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/02/23 23:44:58 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/02/25 17:44:52 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : Name("nou3mane"), Hit_points(10), Energy_points(10), Attack_damage(0)
+ClapTrap::ClapTrap() : Name(""), Hit_points(10), Energy_points(10), Attack_damage(0)
 {}
 
 ClapTrap::ClapTrap(std::string Name) : Name(Name), Hit_points(10), Energy_points(10), Attack_damage(0)
@@ -73,4 +74,27 @@ void ClapTrap::beRepaired(unsigned int amount)
     }
     else
         std::cout << "ClapTrap " << Name << " can't be repaired because it has already detroyes!" << std::endl;
+}
+
+
+std::string ClapTrap::get_name()const{
+    return (this->Name);
+}
+int ClapTrap::get_Hit_pointer()const{
+    return (this->Hit_points);
+}
+int ClapTrap::get_Energy_points()const{
+    return (this->Energy_points);
+}
+int ClapTrap::get_Attack_damage()const{
+    return (this->Attack_damage);
+}
+
+std::ostream& operator<<(std::ostream& COUT, ClapTrap const &i)
+{
+    COUT << i.get_name() << std::endl;
+    COUT << i.get_Hit_pointer() << std::endl;
+    COUT << i.get_Energy_points() << std::endl;
+    COUT << i.get_Attack_damage() << std::endl;
+    return (COUT);
 }

@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 11:19:58 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/02/25 11:56:16 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/02/25 17:48:15 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,30 @@
 #include "ScavTrap.hpp"
 
 int main() {
-    // Create a ClapTrap object
-    // ClapTrap clapTrap("CL4P-TP");
+    
+    FragTrap	a;
+	FragTrap	b("Morgan");
+	ClapTrap	c("Hugues");
+	ScavTrap	d("Ben");
 
-    // // Test ClapTrap functionalities
-    // clapTrap.attack("Bandit");
-    // clapTrap.takeDamage(20);
-    // clapTrap.beRepaired(10);
-
-    // Create a FragTrap object
-    FragTrap fragTrap("FR4G-TP");
-
-    // Test FragTrap functionalities
-    fragTrap.attack("Bandit");
-    fragTrap.highFivesGuys();
-    fragTrap.takeDamage(30);
-
-    // Create a ScavTrap object
-    // ScavTrap scavTrap("SC4V-TP");
-
-    // // Test ScavTrap functionalities
-    // scavTrap.attack("Bandit");
-    // scavTrap.guardgate();
-    // scavTrap.takeDamage(40);
+	std::cout << c << std::endl;
+	std::cout << d << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	b.takeDamage(3);
+	std::cout << b << std::endl;
+	b.takeDamage(20);
+	std::cout << b << std::endl;
+	b.beRepaired(3);
+	std::cout << b << std::endl;
+	b.attack("Eric");
+	b.attack("Eric");
+	std::cout << b << std::endl;
+	b.attack("Eric");
+	std::cout << b << std::endl;
+	b.beRepaired(100);
+	std::cout << b << std::endl;
+	b.attack("Eric");
 
     return 0;
 }
