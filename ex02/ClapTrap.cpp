@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 11:19:48 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/02/25 17:47:29 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/02/25 18:28:32 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,9 @@ void ClapTrap::takeDamage(unsigned int amount)
     {
         Hit_points -= amount;
         std::cout << "ClapTrap " << Name << " takes " << amount << " points of damage!" << std::endl;
+        // std::cout << Hit_points << "-----" << std::endl;
         if (Hit_points <= 0)
-            std::cout << "ClapTrap " << Name << " has been destroyed!" << std::endl;
+            std::cout << "ClapTrap " << Name << " destroyed!" << std::endl;
     }
     else
         std::cout << "ClapTrap " << Name << " has already been destroyed!" << std::endl;
@@ -91,9 +92,9 @@ int ClapTrap::get_Attack_damage()const{
 
 std::ostream& operator<<(std::ostream& COUT, ClapTrap const &i)
 {
-    COUT << i.get_name() << std::endl;
-    COUT << i.get_Hit_pointer() << std::endl;
-    COUT << i.get_Energy_points() << std::endl;
-    COUT << i.get_Attack_damage() << std::endl;
+    COUT << i.get_name();
+    COUT << i.get_Hit_pointer();
+    COUT << i.get_Energy_points();
+    COUT << i.get_Attack_damage();
     return (COUT);
 }
