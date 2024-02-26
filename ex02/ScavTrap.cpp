@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 11:20:00 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/02/25 17:46:03 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/02/26 11:54:14 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,20 @@ ScavTrap::ScavTrap()
 ScavTrap::ScavTrap(const std::string &newName)
 {
     (void)newName;
-    std::cout << "Building ScavTrap named " << Name << std::endl;
+    std::cout << "Building ScavTrap named " << newName << std::endl;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& other)
+{
+    if (this != &other)
+    {
+        Name = other.Name;
+        Hit_points = other.Hit_points;
+        Energy_points = other.Energy_points;
+        Attack_damage = other.Attack_damage;
+        std::cout << "ScavTrap named " << Name << " has been assigned!" << std::endl;
+    }
+    return (*this);
 }
 ScavTrap::~ScavTrap()
 {
