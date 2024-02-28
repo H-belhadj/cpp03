@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 23:44:35 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/02/25 17:44:52 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/02/28 18:01:26 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() : Name(""), Hit_points(10), Energy_points(10), Attack_damage(0)
-{}
+{
+    std::cout << "ClapTrap has been created!" << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string Name) : Name(Name), Hit_points(10), Energy_points(10), Attack_damage(0)
 {
@@ -70,6 +72,7 @@ void ClapTrap::beRepaired(unsigned int amount)
     if (Hit_points > 0)
     {
         Hit_points += amount;
+        Energy_points--;
         std::cout << "ClapTrap " << Name << " has been repaired for " << amount << " hit points!" << std::endl;
     }
     else

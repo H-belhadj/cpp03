@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 11:20:02 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/02/26 11:48:54 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/02/26 12:04:33 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class ScavTrap : public ClapTrap
         ScavTrap& operator=(const ScavTrap& other);
         ~ScavTrap();
         void    guardgate();
+        void attack(const std::string& target);
 };
 
 #endif

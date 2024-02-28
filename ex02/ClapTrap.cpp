@@ -6,14 +6,16 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 11:19:48 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/02/25 18:28:32 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/02/28 18:21:41 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap() : Name(""), Hit_points(10), Energy_points(10), Attack_damage(0)
-{}
+{
+    std::cout << "ClapTrap has been created!" << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string Name) : Name(Name), Hit_points(10), Energy_points(10), Attack_damage(0)
 {
@@ -50,7 +52,7 @@ void ClapTrap::attack(const std::string& target)
         Energy_points--;
     }
     else
-        std::cout << "ClapTrap " << Name << " can't attack " << target << " due to low energy or nno hit points!" << std::endl;
+        std::cout << "ClapTrap " << Name << " can't attack " << target << " due to low energy or no hit points!" << std::endl;
 }
 void ClapTrap::takeDamage(unsigned int amount)
 {
@@ -58,9 +60,8 @@ void ClapTrap::takeDamage(unsigned int amount)
     {
         Hit_points -= amount;
         std::cout << "ClapTrap " << Name << " takes " << amount << " points of damage!" << std::endl;
-        // std::cout << Hit_points << "-----" << std::endl;
         if (Hit_points <= 0)
-            std::cout << "ClapTrap " << Name << " destroyed!" << std::endl;
+            std::cout << "ClapTrap " << Name << " DIE!" << std::endl;
     }
     else
         std::cout << "ClapTrap " << Name << " has already been destroyed!" << std::endl;
@@ -70,6 +71,7 @@ void ClapTrap::beRepaired(unsigned int amount)
     if (Hit_points > 0)
     {
         Hit_points += amount;
+        Energy_points--;
         std::cout << "ClapTrap " << Name << " has been repaired for " << amount << " hit points!" << std::endl;
     }
     else
