@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 11:20:00 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/02/28 18:19:21 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/02/29 16:51:30 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ScavTrap::ScavTrap()
 
 }
 
-ScavTrap::ScavTrap(const std::string &newName)
+ScavTrap::ScavTrap(const std::string newName)
 {
     this->Name = newName;
     this->Hit_points = 100;

@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 23:44:37 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/02/28 18:00:39 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/02/29 16:49:11 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 int main()
 {
 
-    ClapTrap clap("haitam");
-    clap.attack("Enemy");
+    ClapTrap clap("pedri");
+    clap.attack("alaba");
     clap.takeDamage(30);
     clap.beRepaired(20);
     std::cout << "=============================" << std::endl;
-    ScavTrap scav("othman");
-    scav.attack("Enemy");
+    ScavTrap scav("gavi");
+    scav.attack("camavinga");
     scav.guardgate();
 }

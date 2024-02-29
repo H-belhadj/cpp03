@@ -6,7 +6,7 @@
 /*   By: hbelhadj <hbelhadj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/24 11:19:48 by hbelhadj          #+#    #+#             */
-/*   Updated: 2024/02/28 18:21:41 by hbelhadj         ###   ########.fr       */
+/*   Updated: 2024/02/29 16:44:31 by hbelhadj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,9 @@ int ClapTrap::get_Attack_damage()const{
 
 std::ostream& operator<<(std::ostream& COUT, ClapTrap const &i)
 {
-    COUT << i.get_name();
-    COUT << i.get_Hit_pointer();
-    COUT << i.get_Energy_points();
-    COUT << i.get_Attack_damage();
+    COUT << i.get_name() << std::endl;
+    COUT << i.get_Hit_pointer() << std::endl;
+    COUT << i.get_Energy_points() << std::endl;
+    COUT << i.get_Attack_damage() << std::endl;
     return (COUT);
 }
